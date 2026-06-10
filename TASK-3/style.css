@@ -1,0 +1,55 @@
+body {
+    background-color: coral;
+}
+
+.head {
+    color: darkblue;
+}
+
+#bglime {
+    background-color: lime;
+    font-size: 39px;
+}
+
+.highlight-head {
+    color: red;
+}
+
+p {
+    color: white;
+    font-size: 23px;
+}
+
+.highlight-para {
+    color: black;
+    font-size: 30px;
+}
+
+#para {
+    color: green;
+    font-size: 16px;
+}
+
+ul {
+    color: white;
+}
+
+ol {
+    color: black;
+}
+
+a[href="https://www.linkedin.com/company/upskillmafia/"] {
+    background-color: yellow;
+}
+
+a[href="https://www.google.com"] {
+    background-color: purple;
+}
+
+ol li:nth-child(2) {
+    color: blue;
+}
+
+ol li:nth-child(3) {
+    color: red;
+}
