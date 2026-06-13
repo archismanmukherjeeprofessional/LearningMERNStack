@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  font-family: "Poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100vw;
+  min-height: 8vh;
+  padding: 1% 2%;
+}
+
+.logo,
+.nav-links,
+.account {
+  display: inline;
+}
+
+li {
+  display: inline;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: rgb(95, 95, 95);
+}
+#highlight {
+  color: rgb(60, 180, 228);
+}
+.account {
+  padding: 11px;
+  border-radius: 5px;
+  border: none;
+  color: rgb(60, 180, 228);
+  background: rgb(240, 238, 238);
+}
+
+.nav-links li a {
+  margin: 5px;
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+}
+
+.laundry-icon img {
+  float: right;
+  width: 33vw;
+  height: 30vw;
+  object-fit: cover;
+}
+
+.laundry-icon {
+  padding-top: 8vh;
+  float: right;
+  width: 40vmin;
+  height: 40vmin;
+  position: static;
+  object-fit: cover;
+  display: block;
+  top: 22vh;
+  right: 0vh;
+  margin-right: 11%;
+}
+
+main {
+  padding: 5vh 15vh;
+  width: 100vw;
+  height: 92vh;
+  position: fixed;
+  top: 8vh;
+}
+
+.hero {
+  float: left;
+  padding-right: 6vh;
+  padding-left: 6vh;
+  padding-bottom: 6vh;
+  padding-top: 20vh;
+  display: block;
+  width: clamp(300px, 50%, 600px);
+  height: 100%;
+  color: rgb(95, 95, 95);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero button {
+  margin-top: 28px;
+  padding: 11px;
+  min-height: 8vh;
+  min-width: 16vw;
+  border-radius: 18px;
+  border: none;
+  font-weight: bold;
+  background: rgb(60, 180, 228);
+  cursor: pointer;
+  color: white;
+}
+.hero button:hover {
+  background: rgb(45, 135, 170);
+}
+nav {
+  text-align: center;
+}
+
+h3.logo {
+  float: left;
+  line-height: 42px;
+}
+
+button.account {
+  float: right;
+  height: 42px;
+}
+.account {
+  cursor: pointer;
+}
+.account:hover {
+  background: rgb(199, 199, 199);
+}
+ul.nav-links {
+  display: inline-block;
+  line-height: 42px;
+  vertical-align: middle;
+}
+
+ul.nav-links li {
+  display: inline-block;
+}
