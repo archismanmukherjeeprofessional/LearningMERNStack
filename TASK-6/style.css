@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",'sans-serif';
+    background: #f2f9ff;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.laundry-image{
+    flex-basis: 50%;
+    background: url("assets/laundry-image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #01a6ff;
+    background-position: center;
+}
+.login-form{
+    padding: 10vh 5vh;
+    width: 100%;
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+    flex-direction: column;
+}
+.login-form h1,p{
+    color:#333333;
+text-align: center;
+}
+.login-form form label,input,button{
+    display: block;
+    width: 100%;
+}
+label{
+    font-size: 0.8rem;
+    color:#5f5f5f;
+    margin-top: 3vh;
+    
+}
+input{
+    min-height: 3rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    padding: 2px 25px;
+    font-weight: light;
+}
+input::placeholder{
+    color:#d1d1d1;
+}
+#forget-password{
+    font-size: 0.8rem;
+    color:#5f5f5f;
+    text-decoration: none;
+    float:right;
+    margin-bottom: 3vh;
+}
+#login-btn{
+    min-height: 3.5rem;
+    background-color:#0baafe;
+    border: none;
+    border-radius: 10px;
+    color:white;
+    cursor: pointer;
+}
+#login-btn:hover{
+    background-color:#129ae4;
+}
+.cta{
+    font-size: 0.8rem;
+    margin-top: 6vh;
+}
+.cta a{
+    text-decoration: none;
+    color:#01a6ff;
+}
+.greet{
+    margin-bottom: 5vh;
+}
