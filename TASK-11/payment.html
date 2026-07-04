@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Seven by MS Dhoni | Thala 7</title>
+  </head>
+  <body id="checkout">
+    <main id="payment">
+      <div class="l-payment">
+        <h4>Checkout</h4>
+        <h2 class="pay-desc">Contact Details</h2>
+        <h5>Email ID</h5>
+        <input class="input-style" type="text" placeholder="John Doe" />
+        <h2 id="h2-payment" class="pay-desc">Payment</h2>
+        <div class="pay-card">
+          <div class="pay-types">
+            <div id="bank-card" class="pay-methods">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffa23a"
+              >
+                <path
+                  d="M880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720Zm-720 80h640v-80H160v80Zm0 160v240h640v-240H160Zm0 240v-480 480Z"
+                />
+              </svg>
+              <p>Card</p>
+            </div>
+            <div id="crypto" class="pay-methods">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#8f9497"
+              >
+                <path
+                  d="M360-120v-80H240v-80h80v-400h-80v-80h120v-80h80v80h80v-80h80v85q52 14 86 56.5t34 98.5q0 29-10 55.5T682-497q35 21 56.5 57t21.5 80q0 66-47 113t-113 47v80h-80v-80h-80v80h-80Zm40-400h160q33 0 56.5-23.5T640-600q0-33-23.5-56.5T560-680H400v160Zm0 240h200q33 0 56.5-23.5T680-360q0-33-23.5-56.5T600-440H400v160Z"
+                />
+              </svg>
+              <p>Crypto</p>
+            </div>
+            <div id="bank" class="pay-methods">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#8f9497"
+              >
+                <path
+                  d="M200-280v-280h80v280h-80Zm240 0v-280h80v280h-80ZM80-120v-80h800v80H80Zm600-160v-280h80v280h-80ZM80-640v-80l400-200 400 200v80H80Zm178-80h444-444Zm0 0h444L480-830 258-720Z"
+                />
+              </svg>
+              <p>Bank</p>
+            </div>
+            <div class="oth-methods">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#8f9497"
+              >
+                <path
+                  d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="pay-details">
+            <h5>Card Number</h5>
+            <input class="input-style" type="text" placeholder="John Doe" />
+            <div class="card-details">
+              <div class="expiry">
+                <h5>Expiry</h5>
+
+                <input
+                  class="input-style"
+                  type="text"
+                  id="card-expiry"
+                  name="expiry"
+                  placeholder="MM/YY"
+                  maxlength="5"
+                  input
+                  class="input-style"
+                  mode="numeric"
+                  pattern="(0[1-9]|1[0-2])\/[0-9]{2}"
+                />
+              </div>
+              <div class="cvc">
+                <h5>CVC</h5>
+                <input class="input-style" type="tel" placeholder="- - -" />
+              </div>
+              <div class="country">
+                <h5>Country</h5>
+                <select name="" id="" disabled="disabled">
+                  <option value="">India</option>
+                </select>
+              </div>
+              <div class="zip">
+                <h5>ZIP</h5>
+                <input class="input-style" type="tel" placeholder="XXXXXX" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="r-payment">
+        <h1>Order Summary</h1>
+        <div class="order-sum">
+          <div style="background: white" class="bill-t-card">
+            <h3 style="font-size: 0.9rem">Enter Coupon Code</h3>
+            <div class="coupon">
+              <input type="text" placeholder="COUPON CODE" />
+              <button>Apply Coupon</button>
+            </div>
+            <div class="bill-sum">
+              <h3>Sub Total</h3>
+              <h3>₹4,700</h3>
+              <h3 style="font-size: 1rem">Taxes(if applicale)</h3>
+              <h3>₹199</h3>
+              <h3>Discount</h3>
+              <h3>₹0</h3>
+              <h3 style="color: black; font-weight: 700; font-size: 1.2rem">
+                Total
+              </h3>
+              <h3 style="color: black; font-weight: 700; font-size: 1.2rem">
+                ₹4,999
+              </h3>
+            </div>
+          </div>
+          <a href="payment.html"
+            ><button id="pay-btn">Pay Now ₹4,999</button></a
+          >
+          <div class="pay-pics" id="pay-pics">
+            <div class="pay-icons">
+              <img id="ssl" src="assets/ssl-encription.png" alt="" />
+            </div>
+            <div style="width: 12rem;" class="pay-icons">
+              <img id="rayzorpay" src="assets/razorpay.png" alt="" />
+            </div>
+            <div class="pay-icons">
+              <img id="secure-pay" src="assets/secure-payment.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
