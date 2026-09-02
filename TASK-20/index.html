@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Service Booking Web App</title>
+</head>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+</script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init({
+      publicKey: "mliEl64Q9-oyC_R5y",
+    });
+  })();
+</script>
+
+<body>
+      <div id="mob-nav">
+        <button id="close" onclick="closeMenu()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  <nav>
+    <h3 class="logo">Logo</h3>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <button class="account">Username</button>
+    <button id="open" onclick="openMenu()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
+  </nav>
+  
+  <main>
+    <div class="hero-div">
+      <div class="hero">
+        <h1>
+          Revitalize Your <br />
+          Clothes with Expert <br />
+          <span id="highlight">Laundry Services!</span>
+        </h1>
+        <p>
+          From premium dry cleaning to swift wash and fold, we deliver care
+          and convenience. Schedule a pickup and rediscover the freshness of
+          your clothes today!
+        </p>
+        <button style="vertical-align: middle;"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+            <path
+              d="M841-518v318q0 33-23.5 56.5T761-120H201q-33 0-56.5-23.5T121-200v-318q-23-21-35.5-54t-.5-72l42-136q8-26 28.5-43t47.5-17h556q27 0 47 16.5t29 43.5l42 136q12 39-.5 71T841-518Zm-272-42q27 0 41-18.5t11-41.5l-22-140h-78v148q0 21 14 36.5t34 15.5Zm-180 0q23 0 37.5-15.5T441-612v-148h-78l-22 140q-4 24 10.5 42t37.5 18Zm-178 0q18 0 31.5-13t16.5-33l22-154h-78l-40 134q-6 20 6.5 43t41.5 23Zm540 0q29 0 42-23t6-43l-42-134h-76l22 154q3 20 16.5 33t31.5 13ZM201-200h560v-282q-5 2-6.5 2H751q-27 0-47.5-9T663-518q-18 18-41 28t-49 10q-27 0-50.5-10T481-518q-17 18-39.5 28T393-480q-29 0-52.5-10T299-518q-21 21-41.5 29.5T211-480h-4.5q-2.5 0-5.5-2v282Zm560 0H201h560Z" />
+          </svg>Book a Service Today!</button>
+      </div>
+      <div class="laundry-icon"></div>
+    </div>
+    <div class="bg-achievements">
+      <div class="achievement">
+        <h1>Our Achievements</h1>
+        <div class="review-card">
+          <div class="review">
+            <h2>15+</h2>
+            <p>Laundry Services</p>
+          </div>
+          <div class="review">
+            <h2>240+</h2>
+            <p>Happy Customers</p>
+          </div>
+          <div class="review">
+            <h2>2+ Yrs</h2>
+            <p>Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="layout" class="layout">
+      <div class="cart">
+        <h2>Added Items</h2>
+        <div class="cart-table-wrapper">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th class="data-slno">S.No</th>
+                <th class="data-servname">Service Name</th>
+                <th class="data-price">Price</th>
+              </tr>
+            </thead>
+            <tbody id="data-box">
+              <tr id="data" class="data">
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="total-row">
+                <td class="data-slno" style="visibility: hidden">-</td>
+                <td class="data-servname">Total Amount</td>
+                <td id="total-price" class="data-price">₹ 0.00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="book">
+        <h4>Book Now</h4>
+        <h5 class="label">First Name</h5>
+        <input placeholder="John Doe" id="name" type="text" />
+        <div class="cred">
+          <div>
+            <h5 class="label">Email ID</h5>
+            <input placeholder="name@yourmail.com" id="email" type="text" />
+          </div>
+          <div>
+            <h5 class="label">Phone Number</h5>
+            <input placeholder="000000000" id="phone" type="tel" />
+          </div>
+        </div>
+        <button id="book-btn">Book Now</button>
+        <span id="success"></span>
+      </div>
+      <div class="catalogue">
+        <h2>Browse Our Services</h2>
+        <p id="det-cat">
+          Click on the add to cart button to add the services to your cart or
+          press skip
+        </p>
+        <hr />
+        <div class="services">
+          <div class="service">
+            <p class="servname">👗Dry Cleaning</p>
+            <p class="servprice">₹200.00</p>
+            <button id="serv1" onclick="add('Dry Cleaning',200,'serv1')" class="add-item">Add Item<svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                <path
+                  d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+              </svg></button>
+          </div>
+          <div class="service">
+            <p class="servname">🧺 Wash & Fold</p>
+            <p class="servprice">₹100.00</p>
+            <button id="serv2" onclick="add('Wash & Fold',100,'serv2')" class="add-item">Add Item<svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                <path
+                  d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+              </svg></button>
+          </div>
+          <div class="service">
+            <p class="servname">🥌 Ironing</p>
+            <p class="servprice">₹30.00</p>
+            <button id="serv3" onclick="add('Ironing',30,'serv3')" class="add-item">Add Item<svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                <path
+                  d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+              </svg></button>
+          </div>
+          <div class="service">
+            <p class="servname">🎽 Stain Removal</p>
+            <p class="servprice">₹500.00</p>
+            <button id="serv4" onclick="add('Stain Removal',500,'serv4')" class="add-item">Add Item<svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                <path
+                  d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+              </svg></button>
+          </div>
+          <div class="service">
+            <p class="servname">💼 Leather & Suede Cleaing</p>
+            <p class="servprice">₹999.00</p>
+            <button id="serv5" onclick="add('Leather & Suede Cleaning',999,'serv5')" class="add-item">Add Item<svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                <path
+                  d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+              </svg></button>
+          </div>
+          <div class="service">
+            <p class="servname">👰 Wedding Dress Cleaning</p>
+            <p class="servprice">₹2500.00</p>
+            <button id="serv6" onclick="add('Wedding Dress Cleaning',2500,'serv6')" class="add-item">Add Item<svg
+                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                <path
+                  d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+              </svg></button>
+          </div>
+          <hr />
+          <div class="cat-ins-box">
+            <p class="cat-instruction" style="color: #5863f9;">
+              <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px" fill="#5957c7">
+                <path
+                  d="M440-280h80v-240h-80v240Zm68.5-331.5Q520-623 520-640t-11.5-28.5Q497-680 480-680t-28.5 11.5Q440-657 440-640t11.5 28.5Q463-600 480-600t28.5-11.5ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+              </svg>
+              Add the items to the cart and book now
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <hr>
+    <div class="features">
+      <div class="feature"><img src="assets/premium.png" alt="">
+        <h3>Premium Services</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore alias sunt inventore vel sed ut?</p>
+      </div>
+      <div class="feature"><img src="assets/support.png" alt="">
+        <h3>Quick Support</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore alias sunt inventore vel sed ut?</p>
+      </div>
+      <div class="feature"><img src="assets/delivery.png" alt="">
+        <h3>Hassle Free Delivery</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore alias sunt inventore vel sed ut?</p>
+      </div>
+      <div class="feature"><img src="assets/price.png" alt="">
+        <h3>Affordable Prices</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore alias sunt inventore vel sed ut?</p>
+      </div>
+    </div>
+    <hr>
+    <div class="cta">
+  <h1>Subscribe to our newsletter.</h1>
+  <div class="cta-form-container">
+    <div class="input-group">
+      <input id="news-name" type="text" placeholder="Full name" required>
+      <input id="news-email" type="email" placeholder="Email" required>
+    </div>
+    <button onclick="subscribe()" class="subscribe-btn">Subscribe</button>
+  </div>
+</div>
+
+    </div>
+  </main>
+  <footer>
+    <div class="com-det">
+      <h1>Logo</h1>
+      <h4>About us</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis sunt alias magnam?</p>
+    </div>
+    <div class="imp-links">
+      <h4>Important Links</h4>
+      <p>About us</p>
+      <p>Contact us</p>
+      <p>Privacy Policy</p>
+      <p>Terms of use</p>
+      <p>Refund Policy</p>
+    </div>
+    <div class="contact">
+      <h4>Contact</h4>
+      <p>mail@site.com</p>
+      <p>+91 91234 56780</p>
+    </div>
+    <div class="follow">
+      <h4>Follow Us</h4>
+      <svg class="socials" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+ <path d="m50 23.242c-14.754 0-26.758 12.004-26.758 26.758s12.004 26.758 26.758 26.758 26.758-12.004 26.758-26.758-12.004-26.758-26.758-26.758zm0 47.219c-11.285 0-20.461-9.1797-20.461-20.461 0-11.285 9.1797-20.461 20.461-20.461s20.461 9.1797 20.461 20.461-9.1797 20.461-20.461 20.461zm26.758-66.109h-53.516c-9.5469 0-17.312 7.7656-17.312 17.312l-0.003907 56.668c0 9.5469 7.7656 17.312 17.312 17.312h53.516c9.5469 0 17.312-7.7656 17.312-17.312l0.007813-56.664c0-9.5469-7.7695-17.316-17.316-17.316zm11.02 73.98c0 6.0742-4.9453 11.02-11.02 11.02h-53.516c-6.0742 0-11.02-4.9453-11.02-11.02v-56.664c0-6.0742 4.9414-11.02 11.02-11.02h53.516c6.0742 0 11.02 4.9414 11.02 11.02zm-7.6758-60c0.87891 0.88281 1.3867 2.0938 1.3867 3.3359 0 1.2422-0.50391 2.4531-1.3867 3.3359-0.88281 0.88281-2.0938 1.3867-3.3359 1.3867-0.31641 0-0.62891-0.03125-0.92969-0.09375-0.30078-0.0625-0.59766-0.15625-0.88281-0.26953-0.28125-0.125-0.56641-0.26562-0.81641-0.44141-0.25391-0.17188-0.50391-0.36328-0.70703-0.58203-0.88281-0.88281-1.3867-2.0938-1.3867-3.3359 0-0.31641 0.03125-0.61328 0.09375-0.92969 0.046875-0.30078 0.14062-0.59766 0.26562-0.88281 0.10938-0.28125 0.25391-0.55078 0.42578-0.82031 0.17188-0.25 0.375-0.50391 0.59766-0.70703 1.7461-1.7578 4.9102-1.7578 6.6758 0.003906z"/></svg>
+ <svg class="socials" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
+ <path d="m66 28h8c1.1016 0 2-0.89844 2-2v-16c0-1.1016-0.89844-2-2-2h-12c-12.129 0-22 9.8711-22 22v10.16h-14c-1.1016 0-2 0.89844-2 2v15.84c0 1.1016 0.89844 2 2 2h12.609v30c0 1.1016 0.89844 2 2 2h16.699c1.1016 0 2-0.89844 2-2v-30h10.52c0.91016 0 1.7109-0.60938 1.9414-1.5l4.1719-16c0.16016-0.60156 0.03125-1.2383-0.35156-1.7305-0.37891-0.48828-0.96094-0.78125-1.5781-0.78125h-14v-6c0-3.3086 2.6914-6 6-6zm-8 16h13.41l-3.1289 12h-10.98c-1.1016 0-2 0.89844-2 2v30h-12.699v-30c0-1.1016-0.89844-2-2-2h-12.609v-11.84h14c1.1016 0 2-0.89844 2-2v-12.16c0-9.9219 8.0703-18 18-18h10v12h-6c-5.5117 0-10 4.4883-10 10v8c0 1.1016 0.89844 2 2 2z"/></svg>
+ <svg class="socials" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 125" version="1.1" x="0px" y="0px"><title>twitter</title><desc>Created with Sketch.</desc><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M29.5706898,73.1970561 C22.3974157,71.0464408 16.6918269,64.8601788 16.0666448,64.8607368 L16.0627392,64.8607368 C22.3923941,64.5759037 26.6297395,63.7208465 26.8375756,62.9784951 C26.5881722,62.9893751 26.3412797,62.9946756 26.096619,62.9946756 C13.5639636,62.9946756 7.04097926,49.2585237 7.04097926,49.2585237 C9.5018143,51.6030264 13.2554177,52.2817716 16.569915,52.2817716 C20.4973196,52.2817716 23.8073533,51.3279574 23.6140239,51.0618156 C7.06134441,49.2607555 4.99832717,27.4326661 5.00000102,27.4348979 L5.00000102,27.4348979 C15.2813313,35.6476315 66.5722083,33.081623 66.5722083,55.1987301 C66.5722083,70.2608483 55.2480709,75.2609102 43.3659843,75.2609102 C38.6289954,75.2609102 33.8027346,74.4658326 29.5706898,73.1970561 M73.7566414,25.6793107 C73.7552465,25.8865889 73.7332075,26.0963778 73.6832711,26.3064456 C73.3275784,27.8084449 71.8213945,28.7377094 70.3193952,28.3820167 C68.8173959,28.0260451 67.8881315,26.5198612 68.2441031,25.0178619 C68.5707824,23.6380535 69.8691302,22.7444978 71.2428012,22.8839851 C71.0508666,23.1066069 70.9071947,23.3763753 70.8349403,23.6821315 C70.5933483,24.7017837 71.2241099,25.7239467 72.2434831,25.9655387 C72.7872046,26.094146 73.3303682,25.97335 73.7566414,25.6793107 M75.1827596,26.6618593 C74.6306688,28.9918552 72.2942565,30.433317 69.9642605,29.8815053 C67.6339856,29.3294145 66.1925238,26.9930022 66.7446146,24.6627272 C67.2964263,22.3324523 69.6331177,20.8909905 71.9631136,21.4430813 C74.2933885,21.995172 75.7348503,24.3315844 75.1827596,26.6618593 M95,25.9122545 L88.5434116,25.4416243 C88.5074239,25.3660222 88.4705992,25.2906991 88.4334956,25.2156549 L92.6655405,20.555942 C92.2610273,20.4139439 91.8104833,20.2892423 91.3097239,20.1846268 C89.4054432,19.797689 87.2403212,20.006641 85.3363195,20.7515032 C81.4644309,16.6463918 75.7543786,14.3822339 69.728248,15.1474612 C61.3629154,16.2100755 55.0446984,22.7707214 53.9310317,30.7393522 L53.8490132,30.7201029 C53.5312611,32.9602691 53.1111254,35.1170218 52.6047864,37.1956616 C53.2176937,37.4246998 53.8227896,37.6590384 54.411984,37.9036992 C58.9241193,39.7772926 62.2941326,41.9281869 64.7147953,44.4794097 C67.6133415,47.5341817 69.0829797,51.1407654 69.0829797,55.1987301 C69.0829797,59.1852773 68.3414652,62.7449933 66.8788013,65.7782843 C65.5045724,68.6285678 63.4928865,71.0280285 60.8998175,72.9099912 C56.5176843,76.0905807 50.4547291,77.7716817 43.3659843,77.7716817 C38.6030508,77.7716817 33.5834606,77.02124 28.8495404,75.6020962 C28.2542086,75.4235524 27.6521814,75.2132056 27.0448537,74.9755192 C24.3203876,77.0293303 21.6938417,78.735818 19.3331585,80.1231587 C35.5795239,90.1497852 54.2041479,83.6256849 54.9049321,83.3746078 C84.1481666,72.9596487 88.7827718,44.5555698 89.3580175,39.8219286 C89.418276,39.3259117 89.4938781,38.8346374 89.5823131,38.3428052 C89.8693779,36.7437227 90.4379282,33.1388128 90.1634172,30.9764806 C90.1352407,30.7560907 90.0986951,30.5387695 90.0632653,30.3214482 C92.1918416,29.2858945 94.0791048,27.6187422 95,25.9122545" fill="#000000"/></g></svg>
+ <svg class="socials" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" fill="none" x="0px" y="0px"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.1152 19.1673C11.1476 19.7147 5.88113 25.3804 5.54195 32.3612C5.2625 38.1129 5 44.7316 5 49.3006C5 53.9219 5.26854 60.6401 5.55155 66.4372C5.888 73.3287 11.0339 78.9567 17.9044 79.591C25.5099 80.2933 36.5142 81 50 81C63.4507 81 74.4329 80.2969 82.0362 79.5965C88.9333 78.9611 94.0894 73.2967 94.4213 66.3783C94.714 60.2748 95 53.2911 95 49.3006C95 45.353 94.7201 38.4759 94.4307 32.4196C94.0958 25.4118 88.821 19.7109 81.8267 19.1627C74.3405 18.576 63.5426 18 50 18C36.4223 18 25.6036 18.579 18.1152 19.1673ZM41 35.943L64.2 49.3006L41 62.6582V35.943Z" fill="black"/></svg>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

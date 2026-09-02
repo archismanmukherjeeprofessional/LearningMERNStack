@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+nav {
+  background: white;
+  text-align: center;
+  width: 100vw;
+  min-height: 8vh;
+  padding: 1% 2%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  column-gap: 10px;
+  text-decoration: none;
+  list-style: none;
+  flex-basis: 50%;
+  justify-content: center;
+}
+
+li>a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+.logo {
+  color: #3a3a3a;
+  font-size: 2rem;
+}
+
+.account {
+  border-top-left-radius: 25rem;
+  border-bottom-left-radius: 25rem;
+  border: none;
+  color: rgb(60, 180, 228);
+  background: rgb(240, 238, 238);
+  padding: 11px;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+
+.account:hover {
+  background: #d1d0d0;
+}
+
+.logout {
+  background: #ffc9d9;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  border-top-right-radius: 25rem;
+  border-bottom-right-radius: 25rem;
+}
+
+.usefull-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+body {
+  background: #f0eeee;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "cart catalogue"
+    "book catalogue";
+  width: 90vw;
+  margin: 2rem 5vw;
+  gap: 1rem;
+}
+
+
+
+.book {
+  background: white;
+  border: 1px solid hsl(0, 0%, 82%);
+  height: 40vh;
+  border-radius: 20px;
+  grid-area: book;
+}
+
+.catalogue {
+  background: white;
+  border: 1px solid hsl(0, 0%, 82%);
+  height: 83vh;
+  border-radius: 20px;
+  grid-area: catalogue;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cart>h2 {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+thead>tr {
+  background: #f0eeee;
+}
+
+h4,h5,th,h2 {
+  font-weight: 500;
+}
+
+#empty-row {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.info-icon {
+  display: inline-block;
+  text-align: center;
+  border: 3px solid rgb(102, 102, 102);
+  font-weight: 800;
+  color: rgb(102, 102, 102);
+  transform: scale(1.5);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 20rem;
+  margin: 1rem;
+}
+
+.empty-text,.instruction-text {
+  transform: scale(0.9);
+}
+
+.instruction-text {
+  color: rgb(102, 102, 102);
+}
+
+.data-slno {
+  width: 15%;
+  text-align: center;
+}
+
+.data-servname {
+  width: 60%;
+  text-align: left;
+}
+
+.data-price {
+  width: 25%;
+  text-align: right;
+}
+
+.cart {
+  background: white;
+  border: 1px solid hsl(0, 0%, 82%);
+  height: 40vh;
+  border-radius: 20px;
+  grid-area: cart;
+
+  display: flex;
+    position: relative;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cart-table-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.cart-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cart-table thead,.cart-table tbody,.cart-table tfoot {
+  display: block;
+  width: 100%;
+}
+
+.cart-table thead tr {
+  display: flex;
+  background: #f0eeee;
+  width: 100%;
+}
+
+.cart-table tbody {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-table tbody tr {
+  display: flex;
+  width: 100%;
+}
+
+.cart-table tfoot {
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.cart-table tfoot tr {
+  display: flex;
+  width: 100%;
+}
+
+.cart-table th,.cart-table td {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.total-row {
+  border-top: 1px solid hsl(0, 0%, 82%);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #212529;
+}
+
+.book{
+  padding: 1rem;
+  padding-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+}
+input{
+border: 1px solid hsl(0, 0%, 82%);
+  border-radius: 10px;
+  height: 5vh;
+  padding:0.5rem ;
+}
+#name{
+width: 100%;
+  height: 7vh;
+}
+.cred{
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+}
+.cred input{
+  width: 20vw;
+  
+}
+.label{
+  padding-top: 0.1rem;
+}
+#book-btn{
+  width: 100%;
+  padding: 1rem;
+  min-height: 6vh;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #5863f9;
+  color: white;
+  border: none;
+  margin-top: auto;
+  margin-bottom: auto
+}
+button{
+  cursor: pointer;
+}
+.cart,.book{
+  width: 45vw;
+
+}
+.catalogue{
+  width: 45vw;
+  padding: 1rem;
+position: relative;
+}
+.catalogue p{
+  color:hsl(0, 0%, 27%);
+}
+
+.service{
+    width: 95%;
+    height: 62%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.servimg{
+  border: 1px solid #5863f9;
+  border-radius: 10px;
+    width: 98%;
+    height: 85%;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.servdetails{
+  display: flex;
+  justify-content: space-between;
+}
+.actions{
+  margin: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.skip-item{
+  flex-basis: 40%;
+  padding: 0.5rem 0rem;
+  background: #ffd8dd;
+  border: 1px solid #fd9ba8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.add-item{
+  flex-basis: 60%;
+  padding: 0.5rem 0rem;
+  background: #d4fcd4;
+  border: 1px solid #8fff8f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+input:disabled{
+  cursor: not-allowed;
+}
+#book-btn:disabled{
+  cursor: not-allowed;
+  background-color: #aaaaaa;
+  color: black;
+}
+#success{
+  display: flex;
+justify-content: center;
+align-items: center;
+font-size: 0.5rem;
+transform: scale(1.7);
+margin-top: auto;
+margin-bottom: auto;
+}

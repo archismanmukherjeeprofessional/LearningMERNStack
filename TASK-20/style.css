@@ -1,0 +1,939 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+#mob-nav,
+#open {
+  display: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 90vw;
+  min-height: 12vh;
+  padding: 1% 2%;
+}
+
+.logo,
+.nav-links,
+.account {
+  display: inline;
+}
+
+li {
+  display: inline;
+}
+
+.logo {
+  font-size: 4.5rem;
+  color: rgb(95, 95, 95);
+}
+#highlight {
+  color: rgb(60, 180, 228);
+}
+.account {
+  font-size: 1.5rem;
+  padding: 11px;
+  width: 8vw;
+  height: 6vh;
+  border-radius: 5px;
+  border: none;
+  color: rgb(60, 180, 228);
+  background: rgb(240, 238, 238);
+}
+
+.nav-links li a {
+  margin: 25px;
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.laundry-icon {
+  background-image: url("assets/laundry-icon.png");
+  height: inherit;
+  flex-basis: 50%;
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+.hero-div {
+  margin: 0.5rem auto 0rem auto;
+  width: 87vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+main {
+  margin: auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  flex-basis: 50%;
+  flex-direction: column;
+  height: 100%;
+  color: rgb(95, 95, 95);
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+.hero p {
+  font-size: 1.5rem;
+}
+.hero button {
+  font-size: 1.5rem;
+  margin-top: 28px;
+  padding: 11px;
+  height: 11vh;
+  width: 50%;
+  border-radius: 18px;
+  border: none;
+  font-weight: bold;
+  background: rgb(60, 180, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: white;
+}
+.hero button:hover {
+  background: rgb(45, 135, 170);
+}
+nav {
+  text-align: center;
+}
+
+h3.logo {
+  float: left;
+  line-height: 42px;
+}
+
+button.account {
+  float: right;
+}
+.account {
+  cursor: pointer;
+}
+.account:hover {
+  background: rgb(199, 199, 199);
+}
+ul.nav-links {
+  display: inline-block;
+  line-height: 42px;
+  vertical-align: middle;
+}
+
+ul.nav-links li {
+  display: inline-block;
+}
+.bg-achievements {
+  background: #3cb5e4;
+  width: 100vw;
+}
+.achievement {
+  height: 17vh;
+  width: 87vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.achievement > h1 {
+  font-size: 3.5rem;
+  flex-basis: 50%;
+}
+.review-card {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.layout {
+  clear: both;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "catalogue cart"
+    "catalogue book";
+  width: 90vw;
+  margin: 6rem 5vw 3rem 5vw;
+  gap: 1rem;
+}
+
+.book {
+  background: white;
+  border: 1px solid hsl(0, 0%, 82%);
+  height: 43vh;
+  border-radius: 20px;
+  grid-area: book;
+}
+
+.catalogue {
+  background: white;
+  border: 1px solid hsl(0, 0%, 82%);
+  height: 96vh;
+  display: flex;
+  border-radius: 20px;
+  grid-area: catalogue;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.catalogue h2 {
+  font-size: 3.5rem;
+}
+#det-cat {
+  font-size: 1.5rem;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.cart > h2 {
+  padding: 0.5rem;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+thead > tr {
+  background: #f0eeee;
+}
+
+h4,
+h5,
+th,
+h2 {
+  font-weight: 500;
+}
+
+#empty-row {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.info-icon {
+  display: inline-block;
+  text-align: center;
+  border: 3px solid rgb(102, 102, 102);
+  font-weight: 800;
+  color: rgb(102, 102, 102);
+  transform: scale(1.5);
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 20rem;
+  margin: 1rem;
+}
+
+.empty-text,
+.instruction-text {
+  transform: scale(0.9);
+}
+
+.instruction-text {
+  color: rgb(102, 102, 102);
+}
+
+.data-slno {
+  width: 15%;
+  text-align: center;
+}
+
+.data-servname {
+  width: 60%;
+  text-align: left;
+}
+
+.data-price {
+  width: 25%;
+  text-align: right;
+}
+
+.cart {
+  background: white;
+  border: 1px solid hsl(0, 0%, 82%);
+  height: 50vh;
+  border-radius: 20px;
+  grid-area: cart;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cart-table-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.cart-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cart-table thead,
+.cart-table tbody,
+.cart-table tfoot {
+  display: block;
+  width: 100%;
+}
+
+.cart-table thead tr {
+  display: flex;
+  background: #f0eeee;
+  width: 100%;
+}
+
+.cart-table tbody {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-table tbody tr {
+  display: flex;
+  width: 100%;
+}
+
+.cart-table tfoot {
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.cart-table tfoot tr {
+  display: flex;
+  width: 100%;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 0.4rem 1rem;
+  font-size: 2rem;
+}
+
+.total-row {
+  border-top: 1px solid hsl(0, 0%, 82%);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #212529;
+}
+
+.book {
+  padding: 1rem;
+  padding-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+}
+.book h4 {
+  font-size: 3.5rem;
+}
+.label {
+  font-size: 1.5rem;
+}
+input {
+  border: 1px solid hsl(0, 0%, 82%);
+  border-radius: 10px;
+  height: 5vh;
+  padding: 0.5rem;
+}
+#name {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 7vh;
+}
+.cred {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+}
+.cred input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+.cred div {
+  flex: 1 1 0%;
+  min-width: 0px;
+  flex-basis: 50%;
+}
+.label {
+  padding-top: 0.1rem;
+}
+#book-btn {
+  width: 100%;
+  padding: 1rem;
+  min-height: 6vh;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #5863f9;
+  color: white;
+  border: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+button {
+  cursor: pointer;
+}
+.cart,
+.book {
+  width: 45vw;
+}
+.catalogue {
+  width: 45vw;
+  padding: 1rem;
+  position: relative;
+}
+.catalogue p {
+  color: hsl(0, 0%, 27%);
+}
+
+.service {
+  display: flex;
+}
+
+.actions {
+  margin: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.skip-item {
+  flex-basis: 34%;
+  padding: 0.5rem 0rem;
+  background: #ffd8dd;
+  border: 1px solid #fd9ba8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.add-item {
+  flex-basis: 60%;
+  padding: 0.5rem 0rem;
+  background: #d4fcd4;
+  border: 1px solid #8fff8f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.add-item svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.skip-item svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.skip-item {
+  font-size: 2rem;
+}
+input:disabled {
+  cursor: not-allowed;
+}
+#book-btn:disabled {
+  cursor: not-allowed;
+  background-color: #aaaaaa;
+  color: black;
+}
+#success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5rem;
+  transform: scale(1.7);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.services {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 1rem 0rem;
+}
+hr {
+  margin-top: 0.5rem;
+}
+.service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.servname {
+  font-size: 2rem;
+  flex-basis: 33.3333333333333%;
+}
+.servprice {
+  font-size: 2rem;
+  flex-basis: 33.3333333333333%;
+}
+.add-item {
+  font-size: 2rem;
+  flex-basis: 33.3333333333333%;
+}
+.cat-ins-box {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+.features {
+  display: flex;
+  width: 87vw;
+  gap: 1rem;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+.feature > img {
+  width: 45%;
+}
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  flex-basis: 25%;
+  border: 1px solid #dddddd;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+.feature h3 {
+  font-size: 2.2rem;
+}
+.feature p {
+  font-size: 1.2rem;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #4dafff;
+  padding: 60px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.cta h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.cta-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+#news-name,
+#news-email,
+.subscribe-btn {
+  font-size: 1.5rem;
+  width: 17vw;
+  height: 8vh;
+}
+.cta input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 0;
+  padding: 25px 18px;
+  color: white;
+  width: 220px;
+}
+
+.cta input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta button.subscribe-btn {
+  background: white;
+  color: #4dafff;
+  border: none;
+  border-radius: 0;
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.cta button.subscribe-btn:hover {
+  opacity: 0.9;
+}
+footer {
+  display: flex;
+  padding: 2rem;
+  background: #e7e7e7;
+}
+footer h1 {
+  font-size: 3.5rem;
+}
+footer h4 {
+  font-size: 2rem;
+}
+footer p {
+  font-size: 1.5rem;
+}
+.com-det {
+  flex-basis: 30%;
+}
+.imp-links {
+  flex-basis: 20%;
+}
+.contact {
+  flex-basis: 20%;
+}
+.follow {
+  flex-basis: 25%;
+}
+.socials {
+  width: 5vw;
+  height: 5vh;
+}
+.com-det,
+.imp-links,
+.contact,
+.follow > h4 {
+  font-weight: 600;
+  color: #000000;
+}
+.com-det p,
+.imp-links p,
+.contact p,
+.follow p {
+  font-weight: 500;
+  color: #6e6e6e;
+}
+
+@media (width < 1600px) {
+  .logo {
+    font-size: 3.5rem;
+  }
+  .hero h1,
+  .catalogue h2,
+  .cart > h2,
+  .achievement > h1,
+  .cta h1,
+  footer h1 {
+    font-size: 3rem;
+  }
+  .account {
+    width: auto;
+  }
+  .hero button {
+    width: auto;
+    font-size: 2rem;
+  }
+  .hero button svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .hero-div {
+    height: 60vh;
+  }
+
+  .catalogue {
+    height: auto;
+    min-height: 80vh;
+  }
+  .service {
+    flex-direction: column;
+  }
+  .servname,
+  .servprice,
+  .add-item,
+  .skip-item {
+    width: 100%;
+  }
+  .servname {
+    font-size: 2.8rem;
+  }
+  .servprice {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .cart {
+    height: auto;
+  }
+  .book {
+    height: auto;
+  }
+  .cred {
+    flex-direction: column;
+  }
+  .label {
+    font-size: 2rem;
+  }
+  #name {
+    height: 11vh;
+  }
+  .cred input {
+    height: 11vh;
+  }
+  #book-btn {
+    font-size: 2rem;
+    height: 11vh;
+    margin-top: 1rem;
+  }
+}
+
+@media (width < 1200px) {
+  #mob-nav {
+    display: flex;
+  }
+  .account {
+    margin-left: 50vw;
+  }
+  #open {
+    display: block;
+    height: 9vh;
+    width: 6vw;
+    background: none;
+    border: none;
+  }
+  #open svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  ul.nav-links {
+    display: none;
+  }
+  #mob-nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #3cb5e4;
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    z-index: 100;
+    right: 0;
+    box-shadow: 0px 0px 20px 2px black;
+    transition: all 500ms ease-in-out 300ms;
+  }
+  #mob-nav button {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 8vw;
+    height: 9vh;
+    background: none;
+    border: none;
+  }
+  #mob-nav button svg {
+    width: 100%;
+    height: 100%;
+  }
+  #mob-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #mob-nav ul li a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: white;
+  }
+  .hero-div {
+    flex-direction: column;
+  }
+  .hero-div h1 {
+    font-size: 3rem;
+  }
+  .hero-div p {
+    font-size: 1.2rem;
+  }
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "catalogue"
+      "cart"
+      "book";
+    width: 95vw;
+    margin: 2rem auto;
+  }
+  .catalogue,
+  .cart,
+  .book {
+    width: 100%;
+    height: auto;
+  }
+  .catalogue h2,
+  p,
+  .services,
+  .service,
+  .cat-ins-box {
+    width: 100%;
+  }
+  .cat-ins-box svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .account {
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+  }
+}
+
+@media (width < 992px) {
+  .account {
+    margin-left: 38vw;
+  }
+  .review-card,
+  .achievement {
+    flex-direction: column;
+  }
+  .bg-achievements,
+  .achievement {
+    height: auto;
+    gap: 2rem;
+  }
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #news-name,
+  #news-email,
+  .subscribe-btn {
+    width: 43vw;
+  }
+  .review {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  .hero-div {
+    flex-direction: column;
+    height: auto;
+    width: 95vw;
+  }
+  .laundry-icon {
+    width: 100%;
+    height: 300px;
+    flex-basis: auto;
+  }
+  .hero {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+  }
+  .hero button {
+    width: 60%;
+    margin: 20px auto 0 auto;
+  }
+
+  .features {
+    flex-wrap: wrap;
+    width: 95vw;
+  }
+  .feature {
+    width: 48%;
+    flex-basis: auto;
+  }
+}
+
+@media (width < 576px) {
+  .logo {
+    font-size: 2.2rem;
+  }
+  .hero h1,
+  .catalogue h2,
+  .cart > h2,
+  .cta h1 {
+    font-size: 1.8rem;
+  }
+  .servname,
+  .servprice,
+  .add-item,
+  .skip-item {
+    font-size: 1.2rem;
+  }
+  .account {
+    margin-left: 0;
+  }
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .service {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .feature {
+    width: 100%;
+  }
+
+  .cta {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+  .input-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  #news-name,
+  #news-email,
+  .subscribe-btn {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
