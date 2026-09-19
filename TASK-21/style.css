@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+.hook-bg {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  background-image: url("assets/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  z-index: 1;
+}
+.overlay {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.582);
+  position: fixed;
+  z-index: 2;
+}
+.logo {
+  width: 6rem;
+  height: 5rem;
+  border-radius: 100%;
+  position: relative;
+  z-index: 3;
+  margin: 1rem;
+}
+#hamburger {
+  margin-right: 1rem;
+}
+.hero {
+  color: aliceblue;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+.hook {
+  display: flex;
+  height: 59vh;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  color: aliceblue;
+  font-size: 20pt;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hook-btn {
+  align-self: center;
+}
+.hook-btn > button {
+  margin-top: 0.2rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  font-size: 14pt;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 2rem;
+  background: #ff7300;
+  color: aliceblue;
+}
+nav {
+  display: none;
+}
+.mobNav {
+  background: #271a1a;
+  width: 60vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 300ms 50ms ease-in-out;
+}
+.mobNav ul {
+  text-decoration: none;
+  list-style: none;
+  height: 80vh;
+}
+.mobNav ul li {
+  margin-top: 15vh;
+}
+.cross {
+  align-self: flex-end;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+.landing {
+  min-height: 100vh;
+}
+.how {
+  position: relative;
+  z-index: 2;
+  background: #ffedd9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.how > img {
+  width: 100vw;
+  height: 100vh;
+  align-self: center;
+}
+.step {
+  display: flex;
+  gap: 1rem;
+  margin: 0.8rem;
+  font-size: 18pt;
+  font-weight: 200;
+  text-decoration: none;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.num {
+  font-weight: 300;
+  border: 5px solid #ff7300;
+  color: #ff7300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: 50%;
+}
+.step-txt {
+  font-weight: 300;
+}
+.cta-mob {
+  flex-direction: column;
+  display: flex;
+  height: 10rem;
+  width: 20rem;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.cta-mob {
+  height: 5rem;
+  width: 100vw;
+  margin-bottom: 1rem;
+}
+.gplay {
+  height: 5rem;
+  width: 10rem;
+  background-image: url("assets/gplay.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-left: 12.5rem;
+}
+.appstore {
+  height: 5rem;
+  width: 10rem;
+  background-image: url("assets/appstore.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.branches {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  background: aliceblue;
+  padding: 1rem 0;
+}
+.branches > h1 {
+  font-weight: 300;
+  font-size: 18pt;
+  text-align: center;
+  padding: 0.5rem;
+}
+.branches > h1::after {
+  position: relative;
+  display: block;
+  z-index: 2;
+  content: "";
+  width: 16vw;
+  height: 0.2rem;
+  background: #ff7300;
+  margin: 0.5rem auto;
+}
+#lisbon {
+  background-image: url("assets/Lisbon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#london {
+  background-image: url("assets/London.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#berlin {
+  background-image: url("assets/berlin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#sanf {
+  background-image: url("assets/sanFransisco.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card-img {
+
+  width: 85vw;
+  height: 20vh;
+  margin: 1rem auto;
+}
+.card h4 {
+
+  width: 85vw;
+  font-size: 18pt;
+  font-weight: 300;
+  margin: 0.5rem auto;
+}
+.reviews {
+
+  width: 85vw;
+  font-size: 14pt;
+  font-weight: 300;
+  margin: 0.5rem auto;
+}
+.review {
+  display: flex;
+}
+.review > svg {
+  margin-right: 1rem;
+}
+a {
+  color: #ff7300;
+}
+.testimonials {
+  position: relative;
+  z-index: 2;
+  color: aliceblue;
+  padding: 1rem;
+}
+.testimonials > h1 {
+  font-weight: 300;
+  font-size: 18pt;
+  text-align: center;
+  padding: 0.5rem;
+  font-style: normal;
+}
+.testimonials > h1::after {
+  position: relative;
+  display: block;
+  z-index: 2;
+  content: "";
+  width: 16vw;
+  height: 0.2rem;
+  background: #ff7300;
+  margin: 0.5rem auto;
+}
+.test-card p,
+h1 {
+  font-style: italic;
+}
+.test-card h1 {
+  font-size: 36pt;
+}
+.account {
+  width: 85vw;
+  height: 8vh;
+
+  vertical-align: middle;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.profile {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background-image: url("assets/profile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.username {
+  font-size: 15pt;
+}
+.branches>h1{
+    font-style:normal;
+}
